@@ -23,7 +23,33 @@
 
         <div class="col-lg-6">
         
-    </div>
+            <ul>
+                <li>
+                    Color: <?php the_field('color'); ?>
+                </li>
+                
+                <li>
+                    Registration: <?php the_field('registration'); ?>
+                </li>
+
+            </ul>
+
+
+            <?php
+
+            $image = get_field('gallery');
+            if ($image): ?>
+
+                <div class="image">
+                    <a href="<?php echo $image['sizes']['blog-large']; ?>">
+                        <img src="<?php echo $image['sizes']['blog-small']; ?>" class="img-fluid">
+                    </a>
+                </div>
+
+            <?php endif; ?>
+
+
+        </div>
 
     </div>
 
